@@ -13,10 +13,15 @@ public class Main {
         while (true) {
 
             System.out.println("Welcome to FileCrawler!");
+            System.out.println("Search for a keyword, or type Exit to end the program.");
             System.out.print("Enter a keyword: ");
             String keyword = key.next();
 
             checkIfFile(startingFolder, keyword);
+            
+            if (keyword.equalsIgnoreCase("Exit")) {
+                break;
+            }
         }
     }
 
